@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: hr-exit-form
+    runtime: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn app:app"

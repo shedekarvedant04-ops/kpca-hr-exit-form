@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family:'Segoe UI',Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 13px;
+            margin: 20px;
+        }
+
+        .container {
+            width: 100%;
+        }
+
+        h2 {
+            text-align: center;
+            margin: 0;
+            font-size: 18px;
+            color: #555;
+        }
+
+        h3 {
+            text-align: center;
+            margin: 5px 0 15px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .date {
+            text-align: right;
+            margin-top: -25px;
+        }
+
+        hr {
+            margin: 10px 0;
+        }
+
+        h4 {
+            margin-top: 15px;
+            font-size: 14px;
+            border-left: 4px solid #4c8bf5;
+            padding-left: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 5px;
+            page-break-inside: avoid;
+        }
+
+        td, th {
+            border: 1px solid #ccc;
+            padding: 5px;
+        }
+
+        th {
+            text-align: center;
+        }
+
+        .box {
+            border: 1px solid #ccc;
+            padding: 8px;
+            min-height: 50px;
+            margin-top: 5px;
+        }
+
+        .signature {
+            margin-top: 30px;
+        }
+
+        .sign-row {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .sign-box {
+            width: 45%;
+        }
+
+        .signature-img {
+            max-height: 80px;
+            margin-top: 10px;
+        }
+        .page-break {
+            page-break-before: always;
+            margin-top: 20px;
+        }
+        .section {
+            page-break-inside: avoid;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>KIRTANE & PANDIT LLP CHARTERED ACCOUNTANTS</h2>
+    <h3>Exit Interview Form - For Article Student</h3>
+
+    <div class="date">
+        Date: {{ date }}
+    </div>
+
+    <hr>
+
+    <!-- EMPLOYEE DETAILS -->
+    <h4>EMPLOYEE DETAILS</h4>
+    <table>
+        <tr><td>Name Of Article</td><td>{{ name }}</td></tr>
+        <tr><td>Contact No</td><td>{{ contact }}</td></tr>
+        <tr><td>Reporting Partner/Manager</td><td>{{ manager }}</td></tr>
+    </table>
+
+    <hr>
+
+    <p>
+        KPCA LLP requests that you take the time to answer the questions below.
+        Your honesty is appreciated, and all responses will be held in confidence.
+    </p>
+
+    <!-- SECTION 1 -->
+    <h4>WHAT ARE THE REASONS FOR LEAVING KPCA LLP?</h4>
+
+    <div class="box">
+        {{ reasons }}
+    </div>
+
+    <b>Comments:</b>
+    <div class="box">{{ comments|safe }}</div>
+
+    <!-- SECTION 2 -->
+    <h4>KINDLY RANK THE FOLLOWING</h4>
+
+    <table>
+        <tr>
+            <th>Question</th>
+            <th>Selected</th>
+        </tr>
+
+        <tr><td>Articleship was challenging</td><td>{{ q1 }}</td></tr>
+        <tr><td>Opportunities for advancement</td><td>{{ q2 }}</td></tr>
+        <tr><td>Workload manageable</td><td>{{ q3 }}</td></tr>
+        <tr><td>Team interactions</td><td>{{ q4 }}</td></tr>
+        <tr><td>Managers listened</td><td>{{ q5 }}</td></tr>
+        <tr><td>Skills used effectively</td><td>{{ q6 }}</td></tr>
+        <tr><td>Training access</td><td>{{ q7 }}</td></tr>
+    </table>
+
+    <b>Improvement:</b>
+    <div class="box">{{ improvement|safe }}</div>
+
+    <!-- SECTION 3 -->
+    <h4 class="page-break">REMUNERATION AND BENEFITS</h4>
+
+    <table>
+        <tr>
+            <th>Question</th>
+            <th>Selected</th>
+        </tr>
+
+        <tr><td>Stipend adequate</td><td>{{ r1 }}</td></tr>
+        <tr><td>Paid on time</td><td>{{ r2 }}</td></tr>
+        <tr><td>Other benefits</td><td>{{ r3 }}</td></tr>
+        <tr><td>Work-life balance</td><td>{{ r4 }}</td></tr>
+    </table>
+
+    <b>Benefits:</b>
+    <div class="box">{{ benefits|safe }}</div>
+
+    <!-- SECTION 4 -->
+    <h4>THE KPCA LLP</h4>
+
+    <table>
+        <tr><th>Question</th><th>Selected</th></tr>
+
+        <tr><td>Induction helpful</td><td>{{ kpca1 }}</td></tr>
+        <tr><td>Work environment</td><td>{{ kpca2 }}</td></tr>
+        <tr><td>Equipment adequate</td><td>{{ kpca3 }}</td></tr>
+        <tr><td>Team bonding</td><td>{{ kpca4 }}</td></tr>
+        <tr><td>Sufficient members</td><td>{{ kpca5 }}</td></tr>
+        <tr><td>Efficiency</td><td>{{ kpca6 }}</td></tr>
+        <tr><td>Communication</td><td>{{ kpca7 }}</td></tr>
+        <tr><td>No harassment</td><td>{{ kpca8 }}</td></tr>
+        <tr><td>No discrimination</td><td>{{ kpca9 }}</td></tr>
+    </table>
+
+    <b>Department Improvement:</b>
+    <div class="box">{{ kpca_improvement|safe }}</div>
+
+    <!-- SECTION 5 -->
+    <h4 class="page-break">PARTNER / MANAGER / TEAM LEADER / SENIORS</h4>
+
+    <table>
+        <tr><th>Question</th><th>Selected</th></tr>
+
+        <tr><td>Knowledge</td><td>{{ mgr1 }}</td></tr>
+        <tr><td>Supervision</td><td>{{ mgr2 }}</td></tr>
+        <tr><td>Equal treatment</td><td>{{ mgr3 }}</td></tr>
+        <tr><td>Open discussion</td><td>{{ mgr4 }}</td></tr>
+        <tr><td>Recognition</td><td>{{ mgr5 }}</td></tr>
+        <tr><td>Contribution acknowledgment</td><td>{{ mgr6 }}</td></tr>
+        <tr><td>Development support</td><td>{{ mgr7 }}</td></tr>
+        <tr><td>Feedback</td><td>{{ mgr8 }}</td></tr>
+        <tr><td>Communication clarity</td><td>{{ mgr9 }}</td></tr>
+        <tr><td>Professional relationship</td><td>{{ mgr10 }}</td></tr>
+    </table>
+
+    <b>Suggestions:</b>
+    <div class="box">{{ mgr_feedback|safe }}</div>
+
+    <!-- SECTION 6 -->
+    <h4>ABOUT KPCA ARTICLESHIP ROTATION POLICY</h4>
+
+    <table>
+        <tr><th>Question</th><th>Selected</th></tr>
+
+        <tr><td>Overall Scheme</td><td>{{ rot1 }}</td></tr>
+        <tr><td>Value Addition</td><td>{{ rot2 }}</td></tr>
+        <tr><td>Work Experience</td><td>{{ rot3 }}</td></tr>
+    </table>
+
+    <p><b>Rotation Continue:</b> {{ rotation_continue }}</p>
+
+    <b>Comments:</b>
+    <div class="box">{{ rotation_comments|safe }}</div>
+
+    <!-- SIGNATURE -->
+    <div class="signature">
+        <div class="sign-row">
+
+            <div class="sign-box">
+                <b>Place:</b> {{ place }}<br><br>
+                <b>Date:</b> {{ sign_date }}
+            </div>
+
+            <div class="sign-box">
+                <b>Signature:</b><br>
+                {% if signature_url %}
+                    <img src="{{ signature_url }}" class="signature-img">
+                {% endif %}
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,275 @@
+/* Form Body */
+body{
+font-family:'Segoe UI',Tahoma, Geneva, Verdana, sans-serif;
+background:linear-gradient(135deg,#e8eef7,#f5f8fc);
+margin:0;
+padding:0;
+display:flex;
+justify-content:center;
+}
+
+.form-container{
+
+width:900px;
+background:white;
+padding:40px;
+margin:40px 0;
+border-radius:10px;
+box-shadow:0 6px 20px rgba(0,0,0,0.08);
+border:1px solid #e0e0e0;
+position: relative;
+
+}
+
+.title{
+text-align:center;
+font-size:20px;
+font-weight:600;
+letter-spacing:1px;
+color:#2c3e50;
+}
+
+.subtitle{
+text-align:center;
+margin-top:5px;
+margin-bottom:20px;
+color:#555;
+font-size:16px;
+letter-spacing:0.5px;
+}
+
+hr{
+border:none;
+height:1px;
+background:#dcdcdc;
+margin-bottom:25px;
+}
+
+h4{
+margin-top:30px;
+margin-bottom:15px;
+font-size:16px;
+color:#2c3e50;
+border-left:4px solid #4c8bf5;
+padding-left:10px;
+}
+
+
+/* Name Input */
+.form-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.form-table td {
+    padding: 8px 5px;
+    vertical-align: middle;
+}
+
+.form-table .label {
+    width: 250px;
+    font-size:16px;
+    color:#333;
+}
+
+.form-table input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+}
+
+/* NOTE */
+.note {
+    font-size: 13px;
+    text-align: center;
+    margin: 8px 0;
+    color:#555;
+}
+
+/* 1st CheckBox */
+.checkbox-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 40px;
+    row-gap: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.checkbox-grid label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 16px;
+    color: #333;
+}
+
+.checkbox-grid input[type="checkbox"] {
+    transform: scale(1.4);
+    cursor: pointer;
+}
+
+/* Comment Text Boxes */
+
+.comments-box label{
+    font-size: 17px;
+    color: #333;
+}
+
+.big-textbox {
+    width: 100%;
+    height: 90px;
+    border: 1px solid #cccccc2b;
+    border-radius: 6px;
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 14px;
+    resize: none;
+    background: #fafafa;
+    box-shadow:0 6px 20px rgba(0, 0, 0, 0.171);
+}
+
+.big-textbox:focus {
+    border-color: #4c8bf5;
+    outline: none;
+    background: #fff;
+}
+
+/* Rating Table */
+
+th, td {
+    padding: 8px;
+    font-size: 16px;
+}
+
+/* TABLE STYLE (MATCH IMAGE) */
+.rating td {
+    text-align: center;
+    color: #333;
+}
+
+.rating td input[type="radio"] {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+/* DATE ON RIGHT */
+.date {
+    position: absolute;
+    top: 150px;
+    right: 45px;
+}
+
+.date label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+}
+
+.date input {
+    border: none;
+    border-bottom: 1px solid #000;
+    outline: none;
+    padding: 2px 4px;
+    font-size: 16px;
+    width: 140px;
+}
+
+/* SIGNATURE ROW */
+/* INPUT STYLE LIKE FORM LINES */
+
+.underline-input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #000;
+    padding: 4px 2px;
+    font-size: 14px;
+    outline: none;
+}
+
+/* ALIGN RIGHT SIDE FIELDS */
+
+.field-block {
+    margin-bottom: 10px;
+}
+
+.sign-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.sign-row .left {
+    width: 40%;
+}
+
+.sign-row .right {
+    width: 40%;
+    text-align: left;
+}
+
+.signature-preview-box {
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 16 / 5;
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #f9f9f9;
+}
+
+#signaturePreview {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.remove-btn {
+    margin-top: 10px;
+    background:#4c8bf5;
+    color:white;
+    border:none;
+    padding:8px 14px;
+    border-radius:4px;
+    font-size:13px;
+    cursor:pointer;
+    transition:0.2s;
+}
+
+.submit-btn{
+
+    margin-top:20px;
+    font-size:15px;
+    padding:10px 18px;
+    background:#4c8bf5;
+    color:white;
+    border:none;
+    border-radius:4px;
+    cursor:pointer;
+    transition:0.2s;
+}
+
+.error-field {
+    border: 2px solid #e74c3c !important;
+    background: #fff3f3;
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 12px;
+    margin-top: 3px;
+    display: block;
+}
+
+.section-error {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: 5px;
+}

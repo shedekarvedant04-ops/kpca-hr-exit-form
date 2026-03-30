@@ -1,0 +1,6 @@
+Flask
+gunicorn
+gspread
+google-api-python-client
+oauth2client
+weasyprint

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Submission Successful</title>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg,#e8eef7,#f5f8fc);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .success-container {
+            background: white;
+            padding: 40px;
+            width: 500px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+            border: 1px solid #e0e0e0;
+        }
+
+        .success-icon {
+            font-size: 50px;
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #555;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 18px;
+            margin: 8px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .download-btn {
+            background: #4c8bf5;
+            color: white;
+        }
+
+        .download-btn:hover {
+            background: #3a73d9;
+        }
+
+        .new-btn {
+            background: #2ecc71;
+            color: white;
+        }
+
+        .new-btn:hover {
+            background: #27ae60;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const params = new URLSearchParams(window.location.search);
+            const pdf = params.get("pdf");
+
+            const btn = document.getElementById("downloadBtn");
+
+            if (btn && pdf) {
+                btn.href = "/download_pdf/" + pdf;
+            }
+
+        });
+    </script>
+</head>
+
+<body>
+
+<div class="success-container">
+
+    <div class="success-icon">✔</div>
+
+    <h2>Thank You!</h2>
+
+    <p>
+        Your response has been successfully submitted.<br>
+        We appreciate your feedback and wish you all the best for your future.
+    </p>
+
+    <!-- DOWNLOAD PDF -->
+    <a id="downloadBtn" class="btn download-btn">
+        Download Your Form (PDF)
+    </a>
+
+    <br>
+
+    <!-- SUBMIT AGAIN -->
+    <a href="/" class="btn new-btn">
+        Submit Another Response
+    </a>
+
+</div>
+
+</body>
+</html>

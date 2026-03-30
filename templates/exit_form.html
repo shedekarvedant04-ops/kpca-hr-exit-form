@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exit Interview Form</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+
+<body>
+
+<div class="form-container">
+
+    <h2 class="title">KIRTANE & PANDIT LLP CHARTERED ACCOUNTANTS</h2>
+    <h3 class="subtitle">Exit Interview Form - For Article Student</h3>
+
+    <hr>
+    
+    <form id="exitForm">
+        
+            <div class="date">
+                <label>Date: <input type="date" name="date" id="date"></label> 
+            </div>
+            
+            <h4>EMPLOYEE DETAILS:</h4>
+
+            <table class="form-table">
+                <tr>
+                    <td class="label">Name Of Article:</td>
+                    <td><input type="text" name="name" id="name"></td>
+                </tr>
+
+                <tr>
+                    <td class="label">Contact No:</td>
+                    <td><input type="text" name="contact" id="contact"></td>
+                </tr>
+
+                <tr>
+                    <td class="label">Reporting Partner/Manager:</td>
+                    <td><input type="text" name="manager" id="manager"></td>
+                </tr>
+            </table>
+
+        <hr>
+        
+        <p class="note">
+            KPCA LLP requests that you take the time to answer the questions below.
+            Your honesty is appreciated, and all responses will be held in confidence.
+        </p>
+
+        <!-- SECTION 1 -->
+        <div class="section">
+            <h4> WHAT ARE THE REASONS FOR LEAVING KPCA LLP?</h4>
+
+            <div class="checkbox-grid">
+                <label class="checkbox-label"><input type="checkbox" name="reason[]" value="Higher Stipend"> Higher Stipend</label>
+                <label class="checkbox-label"><input type="checkbox" name="reason[]" value="Better benefits"> Better benefits</label>
+                <label class="checkbox-label"><input type="checkbox" name="reason[]" value="Better career opportunity"> Better career opportunity</label>
+
+                <label class="checkbox-label"><input type="checkbox" name="reason[]" value="Improved work life balance"> Improved work life balance</label>
+                <label class="checkbox-label"><input type="checkbox" name="reason[]" value="Career change"> Career change</label>
+                <label class="checkbox-label"><input type="checkbox" name="reason[]" value="Closer to home"> Closer to home</label>
+
+                <label class="checkbox-label"><input type="checkbox" name="reason[]" value="Conflict with other articles"> Conflict with other articles</label>
+                <label class="checkbox-label"><input type="checkbox" name="reason[]" value="Conflict with managers"> Conflict with managers</label>
+                <label class="checkbox-label"><input type="checkbox" name="reason[]" value="Family and/or personal"> Family and/or personal</label>
+
+                <label class="checkbox-label"><input type="checkbox" name="reason[]" value="Industrial Training"> Industrial Training</label>
+                <label class="checkbox-label"><input type="checkbox" name="reason[]" value="Other"> Other</label>
+            </div>
+
+            <div class="comments-box">
+                <label><b>Comments (if any)</b></label>
+                <textarea class="big-textbox" name="comments"></textarea>
+            </div>
+        </div>
+
+        <br>
+        <hr>
+
+
+        <!-- SECTION 2 -->
+        <div class="section">
+            <h4> KINDLY RANK THE FOLLOWING.</h4>
+
+            <table class="rating">
+                <tr>
+                    <th></th>
+                    <th>STRONGLY DISAGREE</th>
+                    <th>DISAGREE</th>
+                    <th>AGREE</th>
+                    <th>STRONGLY AGREE</th>
+                </tr>
+
+                <!-- Repeat rows -->
+                <tr>
+                    <td>Articleship was challenging</td>
+                    <td><input type="radio" name="q1" value="Strongly_Disagree"></td>
+                    <td><input type="radio" name="q1" value="Disagree"></td>
+                    <td><input type="radio" name="q1" value="Agree"></td>
+                    <td><input type="radio" name="q1" value="Strongly_Agree"></td>
+                </tr>
+
+                <tr>
+                    <td>There were sufficient opportunities for advancement</td>
+                    <td><input type="radio" name="q2" value="Strongly_Disagree"></td>
+                    <td><input type="radio" name="q2" value="Disagree"></td>
+                    <td><input type="radio" name="q2" value="Agree"></td>
+                    <td><input type="radio" name="q2" value="Strongly_Agree"></td>
+                </tr>
+
+                <tr>
+                    <td>Workload was manageable</td>
+                    <td><input type="radio" name="q3" value="Strongly_Disagree"></td>
+                    <td><input type="radio" name="q3" value="Disagree"></td>
+                    <td><input type="radio" name="q3" value="Agree"></td>
+                    <td><input type="radio" name="q3" value="Strongly_Agree"></td>
+                </tr>
+
+                <tr>
+                    <td>Sufficient team interactions were available</td>
+                    <td><input type="radio" name="q4" value="Strongly_Disagree"></td>
+                    <td><input type="radio" name="q4" value="Disagree"></td>
+                    <td><input type="radio" name="q4" value="Agree"></td>
+                    <td><input type="radio" name="q4" value="Strongly_Agree"></td>
+                </tr>
+
+                <tr>
+                    <td>Your managers listened and appreciated suggestions</td>
+                    <td><input type="radio" name="q5" value="Strongly_Disagree"></td>
+                    <td><input type="radio" name="q5" value="Disagree"></td>
+                    <td><input type="radio" name="q5" value="Agree"></td>
+                    <td><input type="radio" name="q5" value="Strongly_Agree"></td>
+                </tr>
+
+                <tr>
+                    <td>Your skills were effectively used</td>
+                    <td><input type="radio" name="q6" value="Strongly_Disagree"></td>
+                    <td><input type="radio" name="q6" value="Disagree"></td>
+                    <td><input type="radio" name="q6" value="Agree"></td>
+                    <td><input type="radio" name="q6" value="Strongly_Agree"></td>
+                </tr>
+
+                <tr>
+                    <td>Training and development access was adequate</td>
+                    <td><input type="radio" name="q7" value="Strongly_Disagree"></td>
+                    <td><input type="radio" name="q7" value="Disagree"></td>
+                    <td><input type="radio" name="q7" value="Agree"></td>
+                    <td><input type="radio" name="q7" value="Strongly_Agree"></td>
+                </tr>
+            </table>
+
+            <br>
+
+            <div class="comments-box">
+                <label><b>What do you think can be improved about the articleship?</b></label>
+                <textarea class="big-textbox" name="improvement"></textarea>
+            </div>
+        </div>
+
+        <br>
+        <hr>
+
+        <!-- SECTION 3 -->
+        <div class="section">
+            <h4>REMUNERATION AND BENEFITS.</h4>
+
+            <table class="rating">
+                <tr>
+                    <th></th>
+                    <th>STRONGLY DISAGREE</th>
+                    <th>DISAGREE</th>
+                    <th>AGREE</th>
+                    <th>STRONGLY AGREE</th>
+                </tr>
+
+                <tr>
+                    <td>Stipend was adequate</td>
+                    <td><input type="radio" name="r1" value="Strongly_Disagree"></td>
+                    <td><input type="radio" name="r1" value="Disagree"></td>
+                    <td><input type="radio" name="r1" value="Agree"></td>
+                    <td><input type="radio" name="r1" value="Strongly_Agree"></td>
+                </tr>
+
+                <tr>
+                    <td>Stipends were paid on time</td>
+                    <td><input type="radio" name="r2" value="Strongly_Disagree"></td>
+                    <td><input type="radio" name="r2" value="Disagree"></td>
+                    <td><input type="radio" name="r2" value="Agree"></td>
+                    <td><input type="radio" name="r2" value="Strongly_Agree"></td>
+                </tr>
+
+                <tr>
+                    <td>Other benefits were good</td>
+                    <td><input type="radio" name="r3" value="Strongly_Disagree"></td>
+                    <td><input type="radio" name="r3" value="Disagree"></td>
+                    <td><input type="radio" name="r3" value="Agree"></td>
+                    <td><input type="radio" name="r3" value="Strongly_Agree"></td>
+                </tr>
+
+                <tr>
+                    <td>Work-life balance was promoted</td>
+                    <td><input type="radio" name="r4" value="Strongly_Disagree"></td>
+                    <td><input type="radio" name="r4" value="Disagree"></td>
+                    <td><input type="radio" name="r4" value="Agree"></td>
+                    <td><input type="radio" name="r4" value="Strongly_Agree"></td>
+                </tr>
+            </table>
+
+            <br>
+
+            <div class="comments-box">
+                <label><b>What improvements, other benefits could KPCA LLP offer?</b></label>
+                <textarea class="big-textbox" name="benefits"></textarea>
+            </div>
+        </div>
+
+        <br>
+        <hr>
+
+        <div class="section">
+            <h4>THE KPCA LLP</h4>
+
+            <table class="rating">
+                <tr>
+                    <th></th>
+                    <th>STRONGLY DISAGREE</th>
+                    <th>DISAGREE</th>
+                    <th>AGREE</th>
+                    <th>STRONGLY AGREE</th>
+                </tr>
+
+                <tr>
+                    <td>When you started, did the induction help and was it accurate</td>
+                    <td><input type="radio" name="kpca1" value="Strongly_Disagree"></td>
+                    <td><input type="radio" name="kpca1" value="Disagree"></td>
+                    <td><input type="radio" name="kpca1" value="Agree"></td>
+                    <td><input type="radio" name="kpca1" value="Strongly_Agree"></td>
+                </tr>
+
+                <tr>
+                    <td>Was a good and positive environment to work in</td>
+                    <td><input type="radio" name="kpca2" value="Strongly_Disagree"></td>
+                    <td><input type="radio" name="kpca2" value="Disagree"></td>
+                    <td><input type="radio" name="kpca2" value="Agree"></td>
+                    <td><input type="radio" name="kpca2" value="Strongly_Agree"></td>
+                </tr>
+
+                <tr>
+                    <td>Had adequate equipment to do the work</td>
+                    <td><input type="radio" name="kpca3" value="Strongly_Disagree"></td>
+                    <td><input type="radio" name="kpca3" value="Disagree"></td>
+                    <td><input type="radio" name="kpca3" value="Agree"></td>
+                    <td><input type="radio" name="kpca3" value="Strongly_Agree"></td>
+                </tr>
+
+                <tr>
+                    <td>Got on well with other team members within KPCA</td>
+                    <td><input type="radio" name="kpca4" value="Strongly_Disagree"></td>
+                    <td><input type="radio" name="kpca4" value="Disagree"></td>
+                    <td><input type="radio" name="kpca4" value="Agree"></td>
+                    <td><input type="radio" name="kpca4" value="Strongly_Agree"></td>
+                </tr>
+
+                <tr>
+                    <td>There were sufficient members to cover work</td>
+                    <td><input type="radio" name="kpca5" value="Strongly_Disagree"></td>
+                    <td><input type="radio" name="kpca5" value="Disagree"></td>
+                    <td><input type="radio" name="kpca5" value="Agree"></td>
+                    <td><input type="radio" name="kpca5" value="Strongly_Agree"></td>
+                </tr>
+
+                <tr>
+                    <td>The KPCA LLP was efficient in its dealings</td>
+                    <td><input type="radio" name="kpca6" value="Strongly_Disagree"></td>
+                    <td><input type="radio" name="kpca6" value="Disagree"></td>
+                    <td><input type="radio" name="kpca6" value="Agree"></td>
+                    <td><input type="radio" name="kpca6" value="Strongly_Agree"></td>
+                </tr>
+
+                <tr>
+                    <td>Internal communication worked well within the firm</td>
+                    <td><input type="radio" name="kpca7" value="Strongly_Disagree"></td>
+                    <td><input type="radio" name="kpca7" value="Disagree"></td>
+                    <td><input type="radio" name="kpca7" value="Agree"></td>
+                    <td><input type="radio" name="kpca7" value="Strongly_Agree"></td>
+                </tr>
+
+                <tr>
+                    <td>There was no bullying or harassment in the firm</td>
+                    <td><input type="radio" name="kpca8" value="Strongly_Disagree"></td>
+                    <td><input type="radio" name="kpca8" value="Disagree"></td>
+                    <td><input type="radio" name="kpca8" value="Agree"></td>
+                    <td><input type="radio" name="kpca8" value="Strongly_Agree"></td>
+                </tr>
+
+                <tr>
+                    <td>The practice did not discriminate against any article</td>
+                    <td><input type="radio" name="kpca9" value="Strongly_Disagree"></td>
+                    <td><input type="radio" name="kpca9" value="Disagree"></td>
+                    <td><input type="radio" name="kpca9" value="Agree"></td>
+                    <td><input type="radio" name="kpca9" value="Strongly_Agree"></td>
+                </tr>
+            </table>
+
+            <br>
+
+            <div class="comments-box">
+                <label><b>What do you think can be improved about the Department and Firm?</b></label>
+                <textarea class="big-textbox" name="kpca_improvement"></textarea>
+            </div>
+        </div>
+
+        <br>
+        <hr>
+
+        <div class="section">
+            <h4>PARTNER / MANAGER / TEAM LEADER / SENIORS</h4>
+
+            <table class="rating">
+                <tr>
+                    <th></th>
+                    <th>STRONGLY DISAGREE</th>
+                    <th>DISAGREE</th>
+                    <th>AGREE</th>
+                    <th>STRONGLY AGREE</th>
+                </tr>
+
+                <tr>
+                    <td>Had sufficient knowledge of the job</td>
+                    <td><input type="radio" name="mgr1" value="Strongly_Disagree"></td>
+                    <td><input type="radio" name="mgr1" value="Disagree"></td>
+                    <td><input type="radio" name="mgr1" value="Agree"></td>
+                    <td><input type="radio" name="mgr1" value="Strongly_Agree"></td>
+                </tr>
+
+                <tr>
+                    <td>Is experienced in supervision</td>
+                    <td><input type="radio" name="mgr2" value="Strongly_Disagree"></td>
+                    <td><input type="radio" name="mgr2" value="Disagree"></td>
+                    <td><input type="radio" name="mgr2" value="Agree"></td>
+                    <td><input type="radio" name="mgr2" value="Strongly_Agree"></td>
+                </tr>
+
+                <tr>
+                    <td>Gave fair and equal treatment to the article</td>
+                    <td><input type="radio" name="mgr3" value="Strongly_Disagree"></td>
+                    <td><input type="radio" name="mgr3" value="Disagree"></td>
+                    <td><input type="radio" name="mgr3" value="Agree"></td>
+                    <td><input type="radio" name="mgr3" value="Strongly_Agree"></td>
+                </tr>
+
+                <tr>
+                    <td>Was open to suggestions and available for discussion</td>
+                    <td><input type="radio" name="mgr4" value="Strongly_Disagree"></td>
+                    <td><input type="radio" name="mgr4" value="Disagree"></td>
+                    <td><input type="radio" name="mgr4" value="Agree"></td>
+                    <td><input type="radio" name="mgr4" value="Strongly_Agree"></td>
+                </tr>
+
+                <tr>
+                    <td>Recognised and acknowledged achievements of yours</td>
+                    <td><input type="radio" name="mgr5" value="Strongly_Disagree"></td>
+                    <td><input type="radio" name="mgr5" value="Disagree"></td>
+                    <td><input type="radio" name="mgr5" value="Agree"></td>
+                    <td><input type="radio" name="mgr5" value="Strongly_Agree"></td>
+                </tr>
+
+                <tr>
+                    <td>Acknowledged article contributions</td>
+                    <td><input type="radio" name="mgr6" value="Strongly_Disagree"></td>
+                    <td><input type="radio" name="mgr6" value="Disagree"></td>
+                    <td><input type="radio" name="mgr6" value="Agree"></td>
+                    <td><input type="radio" name="mgr6" value="Strongly_Agree"></td>
+                </tr>
+
+                <tr>
+                    <td>Offered and promoted ways to develop</td>
+                    <td><input type="radio" name="mgr7" value="Strongly_Disagree"></td>
+                    <td><input type="radio" name="mgr7" value="Disagree"></td>
+                    <td><input type="radio" name="mgr7" value="Agree"></td>
+                    <td><input type="radio" name="mgr7" value="Strongly_Agree"></td>
+                </tr>
+
+                <tr>
+                    <td>Provided constructive feedback</td>
+                    <td><input type="radio" name="mgr8" value="Strongly_Disagree"></td>
+                    <td><input type="radio" name="mgr8" value="Disagree"></td>
+                    <td><input type="radio" name="mgr8" value="Agree"></td>
+                    <td><input type="radio" name="mgr8" value="Strongly_Agree"></td>
+                </tr>
+
+                <tr>
+                    <td>Clearly communicated management decisions and impact</td>
+                    <td><input type="radio" name="mgr9" value="Strongly_Disagree"></td>
+                    <td><input type="radio" name="mgr9" value="Disagree"></td>
+                    <td><input type="radio" name="mgr9" value="Agree"></td>
+                    <td><input type="radio" name="mgr9" value="Strongly_Agree"></td>
+                </tr>
+
+                <tr>
+                    <td>Maintained a professional relationship with you</td>
+                    <td><input type="radio" name="mgr10" value="Strongly_Disagree"></td>
+                    <td><input type="radio" name="mgr10" value="Disagree"></td>
+                    <td><input type="radio" name="mgr10" value="Agree"></td>
+                    <td><input type="radio" name="mgr10" value="Strongly_Agree"></td>
+                </tr>
+            </table>
+
+            <br>
+
+            <div class="comments-box">
+                <label><b>What are your suggestions or improvements to your Partner/Manager/Team Leader/Seniors?</b></label>
+                <textarea class="big-textbox" name="mgr_feedback"></textarea>
+            </div>
+        </div>
+
+        <br>
+        <hr>
+
+        <div class="section">
+            <h4>ABOUT KPCA ARTICLESHIP ROTATION POLICY:</h4>
+
+            <table class="rating">
+                <tr>
+                    <th></th>
+                    <th>STRONGLY DISAGREE</th>
+                    <th>DISAGREE</th>
+                    <th>AGREE</th>
+                    <th>STRONGLY AGREE</th>
+                </tr>
+
+                <tr>
+                    <td>Overall Scheme</td>
+                    <td><input type="radio" name="rot1" value="Strongly_Disagree"></td>
+                    <td><input type="radio" name="rot1" value="Disagree"></td>
+                    <td><input type="radio" name="rot1" value="Agree"></td>
+                    <td><input type="radio" name="rot1" value="Strongly_Agree"></td>
+                </tr>
+
+                <tr>
+                    <td>Value Addition in terms of knowledge</td>
+                    <td><input type="radio" name="rot2" value="Strongly_Disagree"></td>
+                    <td><input type="radio" name="rot2" value="Disagree"></td>
+                    <td><input type="radio" name="rot2" value="Agree"></td>
+                    <td><input type="radio" name="rot2" value="Strongly_Agree"></td>
+                </tr>
+
+                <tr>
+                    <td>Work Experience</td>
+                    <td><input type="radio" name="rot3" value="Strongly_Disagree"></td>
+                    <td><input type="radio" name="rot3" value="Disagree"></td>
+                    <td><input type="radio" name="rot3" value="Agree"></td>
+                    <td><input type="radio" name="rot3" value="Strongly_Agree"></td>
+                </tr>
+            </table>
+
+            <br>
+
+            <table class="rating">
+                <tr>
+                    <th></th>
+                    <th>YES</th>
+                    <th>NO</th>
+                    <th>WITH MODIFICATION</th>
+                </tr>
+
+                <tr>
+                    <td>Should rotation system be continued</td>
+                    <td><input type="radio" name="rotation_continue" value="Yes"></td>
+                    <td><input type="radio" name="rotation_continue" value="No"></td>
+                    <td><input type="radio" name="rotation_continue" value="With Modification"></td>
+                </tr>
+            </table>
+
+            <br>
+
+            <!-- COMMENTS -->
+            <div class="comments-box">
+                <label><b>Any other comments and suggestions</b></label>
+                <textarea class="big-textbox" name="rotation_comments"></textarea>
+            </div>
+        </div>
+
+        <div class="signature-section">
+
+            <div class="sign-row">
+
+                <div class="left">
+                    <label><b>Place:</b></label>
+                    <input type="text" name="place" class="underline-input" id="place">
+
+                    <p></p>
+
+                    <div class="field-block">
+                        <label><b>Date:</b></label>
+                        <input type="date" name="sign_date" class="underline-input" id="sign_date">
+                    </div>
+                </div>
+
+                <!-- RIGHT: SIGNATURE + DATE -->
+                <div class="right">
+
+                    <div class="field-block">
+                        <label><b>Signature of Article Student:</b></label>
+                        <input type="file" name="hr_signature_file" id="signatureUpload" accept=".jpg,.jpeg,.png,.webp">
+
+                        <div class="signature-preview-box">
+                            <img id="signaturePreview">
+                        </div>
+
+                        <button type="button" id="removeSignatureBtn" class="remove-btn">Remove Signature</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <button type="submit" class="submit-btn">Submit</button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
