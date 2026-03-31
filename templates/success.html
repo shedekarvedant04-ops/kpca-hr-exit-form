@@ -80,7 +80,9 @@
             const btn = document.getElementById("downloadBtn");
 
             if (btn && pdf) {
-                document.getElementById("downloadBtn").href = pdfLink;
+                const link = decodeURIComponent(pdf);
+                const id = link.split("/d/")[1].split("/")[0];
+                btn.href = `https://drive.google.com/uc?export=download&id=${id}`;
             }
 
         });
