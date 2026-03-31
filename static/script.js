@@ -115,7 +115,7 @@ document.getElementById("exitForm").addEventListener("submit", async function(e)
         let result = await response.json();
 
         if (result.status === "success") {
-            window.location.href = "/success?pdf=" + result.pdf;
+            window.location.href = "/success?pdf=" + encodeURIComponent(result.pdf);
             return;
         } else {
             alert(result.message);

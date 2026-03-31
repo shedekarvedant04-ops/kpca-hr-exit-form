@@ -80,7 +80,7 @@
             const btn = document.getElementById("downloadBtn");
 
             if (btn && pdf) {
-                btn.href = "/download_pdf/" + pdf;
+                document.getElementById("downloadBtn").href = pdfLink;
             }
 
         });
@@ -101,7 +101,7 @@
     </p>
 
     <!-- DOWNLOAD PDF -->
-    <a id="downloadBtn" class="btn download-btn">
+    <a id="downloadBtn" class="btn download-btn" target="_blank">
         Download Your Form (PDF)
     </a>
 

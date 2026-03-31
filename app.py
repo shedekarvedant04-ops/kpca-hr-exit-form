@@ -313,17 +313,11 @@ def submit():
 
         return jsonify({
             "status": "success",
-            "pdf": pdf_filename
+            "pdf": drive_link
         })
 
     except Exception as e:
         return jsonify({"status": "error", "message": str(e)})
-
-
-@app.route("/download_pdf/<filename>")
-def download_pdf(filename):
-    return send_file(os.path.join(PDF_FOLDER, filename), as_attachment=True)
-
 
 @app.route("/success")
 def success():
